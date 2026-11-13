@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { useState } from "react";
 import { Text, View, StyleSheet, TextInput, Button, ScrollView, Alert, Modal } from "react-native";
 
@@ -17,6 +18,8 @@ export default function Index() {
           <TextInput value={email} onChangeText={setEmail} placeholder="Write you email" className="border-3 w-100 rounded-[7px]"></TextInput>
 
           <Button onPress={()=> setModal(true)} title="Click Me"></Button>
+          <Link href={"/about"}>Go to about</Link>
+          <Link href={"/profiles/peoples"}>Go to Profile</Link>
 
           <Modal visible={modal}>
             <View className="flex-1 justify-center items-center bg-black/50">
